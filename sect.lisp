@@ -1,0 +1,6 @@
+(defun my-intersect (list1 list2)
+  (cond ((null list1) nil)
+  ((null list2) nil)
+  ((member (car list1) list2)
+   (cons (car list1) (my-intersect (cdr list1) list2)))
+  (t (my-intersect (cdr list1) list2))))

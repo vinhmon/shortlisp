@@ -1,0 +1,5 @@
+(defun my-fact (n)
+    (cond ((equalp n 0) 1)
+          ((and (numberp n) (plusp n))
+               (* n (my-fact (- n 1))))
+          (t (error "Please input a positive integer!"))))
